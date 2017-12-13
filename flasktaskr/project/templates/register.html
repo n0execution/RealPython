@@ -1,0 +1,64 @@
+{% extends "_base.html" %}
+{% block content %}
+<div class="register">
+	<br>
+	<br>
+	<br>
+	<h1>Welcome to the FlaskTaskr.</h1>
+	<h3>Please register to access the task list.</h3>
+
+	<form method="POST" action="/register/">
+		{{form.csrf_token}}
+		<p>
+			{% if form.name.errors %}
+				{% for error in form.name.errors %}
+					{{ form.name(placeholder=error, class_="check" )}}
+				{% endfor %}
+			{% else%}
+				{{ form.name(placeholder="name")}}
+			{% endif %}
+
+		</p>
+
+		<p>
+			{% if form.email.errors %}
+				{% for error in form.email.errors %}
+					{{ form.email(placeholder=error, class_="check" )}}
+				{% endfor %}
+			{% else%}
+				{{ form.email(placeholder="email")}}
+			{% endif %}
+
+		</p>
+
+		<p>
+			{% if form.password.errors %}
+				{% for error in form.password.errors %}
+					{{ form.password(placeholder=error, class_="check")}}
+				{% endfor %}
+			{% else%}
+				{{ form.password(placeholder="password" )}}
+			{% endif %}
+		</p>
+
+		<p>
+			{% if form.confirm.errors %}
+				{% for error in form.confirm.errors %}
+					{{ form.confirm(placeholder=error, class_="check")}}
+				{% endfor %}
+			{% else%}
+				{{ form.confirm(placeholder="confirm" )}}
+			{% endif %}
+		</p>
+
+
+		<button class="btn btn-sm btn-success" type="submit" style="font-size: 1em; 
+		width: 360px; border: 4px solid black;">
+			Register
+		</button>
+		<br>
+		<br>
+		<p><em>Already registered? </em>Click <a href="/">here</a> to login</p>
+	</form>
+</div>
+{% endblock %}

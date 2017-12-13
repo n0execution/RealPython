@@ -1,0 +1,117 @@
+{% extends "_base.html" %}
+{% block content %}
+
+<h1>Welcome to FlaskTaskr</h1>
+<a href="/logout">Logout</a>
+<div class="add-task">
+	<h3>Add a new task:</h3>
+	<form action="{{ url_for('tasks.new_task') }}" method="post">
+		{{ form.csrf_token }}
+		<p>
+			{% if form.name.errors %}
+				{% for error in form.name.errors %}
+					{{ form.name(placeholder=error, class_="check" )}}
+				{% endfor %}
+			{% else%}
+				{{ form.name(placeholder="name")}}
+			{% endif %}
+		</p>
+
+		<p>
+			{% if form.due_date.errors %}
+				{% for error in form.due_date.errors %}
+					{{ form.due_date(placeholder=error, class_="check" )}}
+				{% endfor %}
+			{% else%}
+				{{ form.due_date(placeholder="due date")}}
+			{% endif %}
+		</p>
+
+		<p>
+			{{ form.priority(placeholder="priority" )}}
+			<span class="error">
+				{% if form.priority.errors %}
+					{% for error in form.priority.errors %}
+						{{error}}
+					{% endfor %}
+				{% endif %}
+			</span>
+		</p>
+
+		<p><input type="submit" value="Submit"></p>
+	</form>
+</div>
+<div class="entries">
+	<br>
+	<br>
+	<h2>Open tasks:</h2>
+	<br>
+	<div class="datagrid">
+		<table>
+			<thead>
+				<tr>
+					<th width="200px"><strong>Task Name</strong></th>
+					<th width="150px"><strong>Due Date</strong></th>
+					<th width="200px"><strong>Posted Date</strong></th>
+					<th width="50px"><strong>Priority</strong></th>
+					<th width="150px"><strong>Posted by</strong></th>
+					<th><strong>Actions</strong></th>
+				</tr>
+			</thead>
+			{% for task in open_tasks %}
+			<tr>
+				<td width="200px">{{ task.name }}</td>
+				<td width="75px">{{ task.due_date }}</td>
+				<td width="100px">{{ task.posted_date }}</td>
+				<td width="50px">{{ task.priority }}</td>
+				<td width="90x">{{ task.poster.name }}</td>
+				<td>
+					{% if task.poster.name == session.name or session.role =="admin" %}
+						<a href="{{ url_for('tasks.delete_entry', task_id = task.task_id) }}">Delete</a> -
+						<a href="{{ url_for('tasks.complete', task_id =task.task_id) }}">Mark as Complete</a>
+					{% else %}
+						<span>N/A</span>
+					{% endif %}
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<br>
+	<br>
+</div>
+<div class="entries">
+	<h2>Closed tasks:</h2>
+	<br>
+	<div class="datagrid">
+		<table>
+			<thead>
+				<tr>
+					<th width="200px"><strong>Task Name</strong></th>
+					<th width="150px"><strong>Due Date</strong></th>
+					<th width="200px"><strong>Posted Date</strong></th>
+					<th width="50px"><strong>Priority</strong></th>
+					<th width="150px"><strong>Posted by</strong></th>
+					<th><strong>Actions</strong></th>
+				</tr>
+			</thead>
+			{% for task in closed_tasks %}
+			<tr>
+				<td width="200px">{{ task.name }}</td>
+				<td width="75px">{{ task.due_date }}</td>
+				<td width="100px">{{ task.posted_date }}</td>
+				<td width="50px">{{ task.priority }}</td>
+				<td width="90x">{{ task.poster.name }}</td>
+				<td>
+					{% if task.poster.name == session.name or session.role == "admin" %}
+						<a href="{{ url_for('tasks.delete_entry', task_id = task.task_id) }}">Delete</a>
+					{% else %}
+						<span>N/A</span>
+					{% endif %}
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</div>
+{% endblock %}
