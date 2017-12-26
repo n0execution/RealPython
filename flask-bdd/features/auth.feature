@@ -19,5 +19,5 @@ Then we should see the alert "Invalid password"
 Scenario: successful logout
 Given flaskr is set up
 and we log in with "admin" and "admin"
-When we logout
+When we log out
 Then we should see the alert "You were logged out"
