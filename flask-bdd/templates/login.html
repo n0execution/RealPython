@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flask - Behavior Driven Development</title>
+	<meta name="viewport" content="width=device-width,
+	initial-scale=1.0">
+	<link href="http://netdna.bootstrapcdn.com/
+	bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"
+	media="screen">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<h1>Flask - BDD</h1>
+	{% for message in get_flashed_messages() %}
+		<div class="flash">{{ message }}</div>
+	{% endfor %}
+
+	<h3>Login</h3>
+	{% if error %}
+		<p class="error"><strong>Error:</strong> {{ error}}
+	{% endif %}
+	
+	<form action="{{ url_for('login') }}" method="post">
+		<dl>
+			<dt>Username:
+			<dd><input type="text" name="username">
+			<dt>Password:
+			<dd><input type="password" name="password">
+			<br>
+			<br>
+			<dd><input type="submit" class="btn btn-default"
+			value="Login">
+			<span>Use "admin" for the username and password</span>
+		</dl>
+	</form>
+</div>
+</body>
+</html>

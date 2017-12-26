@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+{% block content %}
+
+	<div class="container">
+		<h1>Flask - BDD</h1>
+		{% if not session.logged_in %}
+			<a href="{{ url_for('login') }}">log in</a>
+		{% else %}
+			<a href="{{ url_for('logout') }}">log out</a>
+		{% endif %}
+		
+		{% for message in get_flashed_messages() %}
+			<div class="flash">{{ message }}</div>
+		{% endfor %}
+		{% if session.logged_in %}
+			<h1>Hi!</h1>
+		{% endif %}
+	</div>
+
+{% endblock %}

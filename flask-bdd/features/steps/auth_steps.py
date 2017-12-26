@@ -24,4 +24,4 @@ def logout(context):
 
 @then(u'we should see the alert "{message}"')
 def message(context, message):
-	assert message in context.page.data
+	assert message in context.page.data.decode('utf-8')
