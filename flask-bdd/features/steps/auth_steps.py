@@ -25,3 +25,14 @@ def logout(context):
 @then(u'we should see the alert "{message}"')
 def message(context, message):
 	assert message in context.page.data.decode('utf-8')
+
+
+
+@when(u'we add a new entry with "{title}" and "{text}" as the title and text')
+def add(context, title, text):
+	context.page = context.client.post(
+									'/add',
+									data=dict(title=title, text=text),
+									follow_redirects=True
+									)
+	assert context.page
