@@ -50,3 +50,9 @@ def add(context, title, text):
 									follow_redirects=True
 									)
 	assert context.page
+
+
+
+@then(u'we should see the post with "{title}" and "{text}" as the title and text')
+def entry(context, title, text):
+	assert title and text in context.page.data
