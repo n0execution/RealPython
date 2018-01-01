@@ -35,4 +35,4 @@ Scenario: unsuccessful post
 Given flaskr is set up
 Given we are not logged in
 When we add a new entry with "test" and "test" as the title and text
-Then we should see a "405" status code
+Then we should see a "401" status code

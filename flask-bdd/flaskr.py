@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, session, flash	 	
+from flask import Flask, request, render_template, session, flash, abort	
 
 
 DATABASE = 'flaskr.db'
@@ -43,6 +43,8 @@ def logout():
 
 @app.route('/add', methods=['POST'])
 def add_entry():
+	if not session.get('logged_in'):
+		abort(401)
 	flash('New entry was successfully posted')
 	return render_template('index.html')	
 

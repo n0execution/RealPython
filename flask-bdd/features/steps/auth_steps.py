@@ -5,6 +5,12 @@ def flask_is_setup(context):
 	assert context.client
 
 
+@given(u'we are not logged in')
+def logout(context):
+	context.page = context.client.get('/logout', follow_redirects=True)
+
+
+
 @given(u'we log in with "{username}" and "{password}"')
 @when(u'we log in with "{username}" and "{password}"')
 def login(context, username, password):
@@ -25,6 +31,14 @@ def logout(context):
 @then(u'we should see the alert "{message}"')
 def message(context, message):
 	assert message in context.page.data.decode('utf-8')
+
+
+
+
+@then(u'we should see a "{message}" status code')
+def message(context, message):
+	assert message in context.page.data.decode('utf-8')
+
 
 
 
