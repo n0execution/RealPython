@@ -2,7 +2,7 @@ from behave import *
 
 @given(u'flaskr is set up')
 def flask_is_setup(context):
-	assert context.client
+	assert context.client and context.db
 
 
 @given(u'we are not logged in')
@@ -55,4 +55,4 @@ def add(context, title, text):
 
 @then(u'we should see the post with "{title}" and "{text}" as the title and text')
 def entry(context, title, text):
-	assert title and text in context.page.data
+	assert title and text in context.page.data.decode('utf-8')

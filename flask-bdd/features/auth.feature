@@ -32,6 +32,7 @@ Then we should see the alert "New entry was successfully posted"
 Then we should see the post with "test" and "test" as the title and text
 
 
+
 Scenario: unsuccessful post
 Given flaskr is set up
 Given we are not logged in

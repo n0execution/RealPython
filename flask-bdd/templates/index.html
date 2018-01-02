@@ -12,6 +12,7 @@
 		{% for message in get_flashed_messages() %}
 			<div class="flash">{{ message }}</div>
 		{% endfor %}
+
 		{% if session.logged_in %}
 			<br><br>
 			<form action="{{ url_for('add_entry') }}" method="post"
@@ -29,9 +30,11 @@
 		{% endif %}
 		<ul>
 			{% for entry in entries %}
-				<li><h2>{{ entry.title }}</h2>{{ entry.text|safe }}
+				{% if entry in entries %}
+					<li><h2>{{ entry.title }}</h2>{{ entry.text|safe }}
 				{% else %}
-				<li><em>No entries yet. Add some!</em>
+					<li><em>No entries yet. Add some!</em>
+				{% endif %}
 			{% endfor %}
 		</ul>
 	</div>
