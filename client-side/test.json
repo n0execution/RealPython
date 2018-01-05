@@ -1,0 +1,111 @@
+{
+   "geocoded_waypoints" : [
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJ4zGFAZpYwokRGUGph3Mf37k",
+         "types" : [ "establishment", "park", "point_of_interest" ]
+      },
+      {
+         "geocoder_status" : "OK",
+         "place_id" : "ChIJmQJIxlVYwokRLgeuocVOGVU",
+         "types" : [ "establishment", "park", "point_of_interest" ]
+      }
+   ],
+   "routes" : [
+      {
+         "bounds" : {
+            "northeast" : {
+               "lat" : 40.7669204,
+               "lng" : -73.978951
+            },
+            "southwest" : {
+               "lat" : 40.7591859,
+               "lng" : -73.9846254
+            }
+         },
+         "copyrights" : "Дані карт ©2018 Google",
+         "legs" : [
+            {
+               "distance" : {
+                  "text" : "0,6 миль",
+                  "value" : 989
+               },
+               "duration" : {
+                  "text" : "12 хв",
+                  "value" : 747
+               },
+               "end_address" : "Таймс-Сквер, Manhattan, NY 10036, Сполучені Штати Америки",
+               "end_location" : {
+                  "lat" : 40.7591859,
+                  "lng" : -73.9846254
+               },
+               "start_address" : "Центральний парк, New York, NY, Сполучені Штати Америки",
+               "start_location" : {
+                  "lat" : 40.7668842,
+                  "lng" : -73.978951
+               },
+               "steps" : [
+                  {
+                     "distance" : {
+                        "text" : "26 футів",
+                        "value" : 8
+                     },
+                     "duration" : {
+                        "text" : "1 хв",
+                        "value" : 7
+                     },
+                     "end_location" : {
+                        "lat" : 40.7669204,
+                        "lng" : -73.9790398
+                     },
+                     "html_instructions" : "Прямуйте на \u003cb\u003eпівнічний захід\u003c/b\u003e по \u003cb\u003eW 59th St\u003c/b\u003e/\u003cb\u003eCentral Park S\u003c/b\u003e в напрямку \u003cb\u003e7th Ave\u003c/b\u003e/\u003cb\u003eWest Dr\u003c/b\u003e",
+                     "polyline" : {
+                        "points" : "_hywFl_pbMGP"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7668842,
+                        "lng" : -73.978951
+                     },
+                     "travel_mode" : "WALKING"
+                  },
+                  {
+                     "distance" : {
+                        "text" : "0,6 миль",
+                        "value" : 981
+                     },
+                     "duration" : {
+                        "text" : "12 хв",
+                        "value" : 740
+                     },
+                     "end_location" : {
+                        "lat" : 40.7591859,
+                        "lng" : -73.9846254
+                     },
+                     "html_instructions" : "Поверніть \u003cb\u003eліворуч\u003c/b\u003e на \u003cb\u003e7th Ave\u003c/b\u003e",
+                     "maneuver" : "turn-left",
+                     "polyline" : {
+                        "points" : "ghywF~_pbMND~B|AfC`BfCbBzBxAzBxA|BzAzB|A~BxAzBxA|BzA|AfA\\R~@l@~@f@@B"
+                     },
+                     "start_location" : {
+                        "lat" : 40.7669204,
+                        "lng" : -73.9790398
+                     },
+                     "travel_mode" : "WALKING"
+                  }
+               ],
+               "traffic_speed_entry" : [],
+               "via_waypoint" : []
+            }
+         ],
+         "overview_polyline" : {
+            "points" : "_hywFl_pbMGPNDfG~D|NrJtNlJzBzA~BtA@B"
+         },
+         "summary" : "7th Ave",
+         "warnings" : [
+            "Маршрути пішки зараз на стадії бета-тестування. Будьте обережні – у цьому маршруті може не бути тротуарів або пішохідних шляхів."
+         ],
+         "waypoint_order" : []
+      }
+   ],
+   "status" : "OK"
+}
