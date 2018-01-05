@@ -1,119 +1,119 @@
 {
-  "routes": [
-    {
-      "copyrights": "Map data \u00a92018 Google",
-      "summary": "7th Ave",
-      "bounds": {
-        "southwest": {
-          "lat": 40.7591859,
-          "lng": -73.9846254
-        },
-        "northeast": {
-          "lat": 40.7669204,
-          "lng": -73.978951
-        }
-      },
-      "overview_polyline": {
-        "points": "_hywFl_pbMGPNDfG~D|NrJtNlJzBzA~BtA@B"
-      },
-      "legs": [
-        {
-          "end_address": "Times Square, Manhattan, NY 10036, USA",
-          "start_location": {
-            "lat": 40.7668842,
-            "lng": -73.978951
-          },
-          "via_waypoint": [],
-          "traffic_speed_entry": [],
-          "steps": [
-            {
-              "start_location": {
-                "lat": 40.7668842,
-                "lng": -73.978951
-              },
-              "end_location": {
-                "lat": 40.7669204,
-                "lng": -73.9790398
-              },
-              "travel_mode": "WALKING",
-              "distance": {
-                "text": "26 ft",
-                "value": 8
-              },
-              "duration": {
-                "text": "1 min",
-                "value": 7
-              },
-              "html_instructions": "Head <b>northwest</b> on <b>W 59th St</b>/<b>Central Park S</b> toward <b>7th Ave</b>/<b>West Dr</b>",
-              "polyline": {
-                "points": "_hywFl_pbMGP"
-              }
-            },
-            {
-              "start_location": {
-                "lat": 40.7669204,
-                "lng": -73.9790398
-              },
-              "maneuver": "turn-left",
-              "travel_mode": "WALKING",
-              "polyline": {
-                "points": "ghywF~_pbMND~B|AfC`BfCbBzBxAzBxA|BzAzB|A~BxAzBxA|BzA|AfA\\R~@l@~@f@@B"
-              },
-              "distance": {
-                "text": "0.6 mi",
-                "value": 981
-              },
-              "duration": {
-                "text": "12 mins",
-                "value": 740
-              },
-              "html_instructions": "Turn <b>left</b> onto <b>7th Ave</b>",
-              "end_location": {
-                "lat": 40.7591859,
-                "lng": -73.9846254
-              }
-            }
-          ],
-          "start_address": "Central Park, New York, NY, USA",
-          "distance": {
-            "text": "0.6 mi",
-            "value": 989
-          },
-          "duration": {
-            "text": "12 mins",
-            "value": 747
-          },
-          "end_location": {
-            "lat": 40.7591859,
-            "lng": -73.9846254
-          }
-        }
-      ],
-      "warnings": [
-        "Walking directions are in beta.    Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
-      ],
-      "waypoint_order": []
-    }
-  ],
   "geocoded_waypoints": [
     {
       "geocoder_status": "OK",
-      "place_id": "ChIJ4zGFAZpYwokRGUGph3Mf37k",
       "types": [
         "establishment",
         "park",
         "point_of_interest"
-      ]
+      ],
+      "place_id": "ChIJ4zGFAZpYwokRGUGph3Mf37k"
     },
     {
       "geocoder_status": "OK",
-      "place_id": "ChIJmQJIxlVYwokRLgeuocVOGVU",
       "types": [
         "establishment",
         "park",
         "point_of_interest"
-      ]
+      ],
+      "place_id": "ChIJmQJIxlVYwokRLgeuocVOGVU"
     }
   ],
-  "status": "OK"
+  "status": "OK",
+  "routes": [
+    {
+      "legs": [
+        {
+          "start_address": "Central Park, New York, NY, USA",
+          "steps": [
+            {
+              "travel_mode": "WALKING",
+              "html_instructions": "Head <b>northwest</b> on <b>W 59th St</b>/<b>Central Park S</b> toward <b>7th Ave</b>/<b>West Dr</b>",
+              "end_location": {
+                "lng": -73.9790398,
+                "lat": 40.7669204
+              },
+              "distance": {
+                "value": 8,
+                "text": "26 ft"
+              },
+              "polyline": {
+                "points": "_hywFl_pbMGP"
+              },
+              "start_location": {
+                "lng": -73.978951,
+                "lat": 40.7668842
+              },
+              "duration": {
+                "value": 7,
+                "text": "1 min"
+              }
+            },
+            {
+              "maneuver": "turn-left",
+              "travel_mode": "WALKING",
+              "html_instructions": "Turn <b>left</b> onto <b>7th Ave</b>",
+              "end_location": {
+                "lng": -73.9846254,
+                "lat": 40.7591859
+              },
+              "distance": {
+                "value": 981,
+                "text": "0.6 mi"
+              },
+              "polyline": {
+                "points": "ghywF~_pbMND~B|AfC`BfCbBzBxAzBxA|BzAzB|A~BxAzBxA|BzA|AfA\\R~@l@~@f@@B"
+              },
+              "start_location": {
+                "lng": -73.9790398,
+                "lat": 40.7669204
+              },
+              "duration": {
+                "value": 740,
+                "text": "12 mins"
+              }
+            }
+          ],
+          "via_waypoint": [],
+          "end_address": "Times Square, Manhattan, NY 10036, USA",
+          "end_location": {
+            "lng": -73.9846254,
+            "lat": 40.7591859
+          },
+          "distance": {
+            "value": 989,
+            "text": "0.6 mi"
+          },
+          "traffic_speed_entry": [],
+          "start_location": {
+            "lng": -73.978951,
+            "lat": 40.7668842
+          },
+          "duration": {
+            "value": 747,
+            "text": "12 mins"
+          }
+        }
+      ],
+      "waypoint_order": [],
+      "warnings": [
+        "Walking directions are in beta.    Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+      ],
+      "bounds": {
+        "northeast": {
+          "lng": -73.978951,
+          "lat": 40.7669204
+        },
+        "southwest": {
+          "lng": -73.9846254,
+          "lat": 40.7591859
+        }
+      },
+      "summary": "7th Ave",
+      "overview_polyline": {
+        "points": "_hywFl_pbMGPNDfG~D|NrJtNlJzBzA~BtA@B"
+      },
+      "copyrights": "Map data \u00a92018 Google"
+    }
+  ]
 }
