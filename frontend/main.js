@@ -17,3 +17,9 @@ $(function() {
         $('input').val('')
     });
 });
+
+$(document).on('click', 'a', function (e) 
+{
+    e.preventDefault();
+    $(this).parent().remove();
+});
